@@ -1,98 +1,47 @@
 <!--
  * @Author: Vincent Young
  * @Date: 2022-10-18 07:32:29
- * @LastEditors: Vincent Young
- * @LastEditTime: 2023-02-28 18:14:40
+ * @LastEditors: Vincent Yang
+ * @LastEditTime: 2024-11-30 19:48:00
  * @FilePath: /DeepLX/README.md
  * @Telegram: https://t.me/missuo
  * 
  * Copyright © 2022 by Vincent, All Rights Reserved. 
 -->
-# DeepL X
-Permanently free DeepL API written in Golang
 
-## Description
-- `deeplx` in only run in port `1188`, later versions will do the specified port.
-- `deeplx` is listening to `0.0.0.0:1188` by default.
-- `deeplx` is using `DeepL` Free API.
-- `deeplx` is unlimited to the number of requests.
+[![GitHub Workflow][1]](https://github.com/OwO-Network/DeepLX/actions)
+[![Go Version][2]](https://github.com/OwO-Network/DeepLX/blob/main/go.mod)
+[![Go Report][3]](https://goreportcard.com/badge/github.com/OwO-Network/DeepLX)
+[![GitHub License][4]](https://github.com/OwO-Network/DeepLX/blob/main/LICENSE)
+[![Docker Pulls][5]](https://hub.docker.com/r/missuo/deeplx)
+[![Releases][6]](https://github.com/OwO-Network/DeepLX/releases)
 
-## Usage
-### Request Parameters
-- text: string
-- source_lang: string
-- target_lang: string
+[1]: https://img.shields.io/github/actions/workflow/status/OwO-Network/DeepLX/release.yaml?logo=github
+[2]: https://img.shields.io/github/go-mod/go-version/OwO-Network/DeepLX?logo=go
+[3]: https://goreportcard.com/badge/github.com/OwO-Network/DeepLX
+[4]: https://img.shields.io/github/license/OwO-Network/DeepLX
+[5]: https://img.shields.io/docker/pulls/missuo/deeplx?logo=docker
+[6]: https://img.shields.io/github/v/release/OwO-Network/DeepLX?logo=smartthings
 
-### Response
-```json
-{
-  "code": 200,
-  "data": "Hello world",
-  "id": 8305092005
-}
-```
+## How to use
 
-### Run on Linux Server
-```bash
-bash <(curl -Ls https://cpp.li/deeplx)
-```
+> \[!TIP]
+>
+> Learn more about [📘 Using DeepLX](https://deeplx.owo.network) by checking it out.
 
-### Run on Mac
-#### Homebrew
-```bash
-brew tap owo-network/brew
-brew install deeplx
-brew services start owo-network/brew/deeplx
-```
+## Discussion Group
+[Telegram Group](https://t.me/+8KDGHKJCxEVkNzll)
 
-#### Manual
-1. Download  the latest release of DeepL X.
-```bash
-sudo mv deeplx_darwin_amd64 /usr/local/bin/deeplx
-sudo chmod +x /usr/local/bin/deeplx
-```
+## Acknowledgements
 
-2. Download the `me.missuo.deeplx.plist` to `~/Library/LaunchAgents`.
-```bash
-wget https://raw.githubusercontent.com/OwO-Network/DeepLX/main/me.missuo.deeplx.plist -O ~/Library/LaunchAgents/me.missuo.deeplx.plist
-```
-3. Run following command.
-```bash
-launchctl load ~/Library/LaunchAgents/me.missuo.deeplx.plist
-launchctl start ~/Library/LaunchAgents/me.missuo.deeplx.plist
-```
+### Contributors
 
-### Install from AUR
-```bash
-paru -S deeplx-bin
-```
+<a href="https://github.com/OwO-Network/DeepLX/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=OwO-Network/DeepLX&anon=0" />
+</a>
 
-After installation, start the daemon with the following command.
+## Activity
+![Alt](https://repobeats.axiom.co/api/embed/5f473f85db27cb30028a2f3db7a560f3577a4860.svg "Repobeats analytics image")
 
-```bash
-systemctl daemon-reload
-systemctl enable deeplx
-
-```
-## Setup on [Bob App](https://bobtranslate.com/)
-1. Install [bob-plugin-deeplx](https://github.com/clubxdev/bob-plugin-deeplx) on Bob.
-
-2. Setup the API.
-![c5c19dd89df6fae1a256d](https://missuo.ru/file/c5c19dd89df6fae1a256d.png)
-
-## Setup on [immersive-translate](https://github.com/immersive-translate/immersive-translate)
-1. Install Latest [immersive-translate ](https://github.com/immersive-translate/immersive-translate/releases) on your browser.
-
-2. Click on **Developer Settings** in the bottom left corner. **Enable Beta experimental features**.
-
-3. Set the URL.
-![0779ecf8c7d7d1bee532b](https://missuo.ru/file/0779ecf8c7d7d1bee532b.png)
-
-## Backup the Docker Image of zu1k
-```shell
-docker run -itd -p 1188:80 missuo/deeplx-bk
-```
-**This docker image is not related to this project, as the original author deleted the image, it is only for backup.**
-
-## Author
-**DeepL X** © [DeepL X Contributors](https://github.com/OwO-Network/DeepLX/graphs/contributors), Released under the [MIT](./LICENSE) License.<br>
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FOwO-Network%2FDeepLX.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FOwO-Network%2FDeepLX?ref=badge_large)
